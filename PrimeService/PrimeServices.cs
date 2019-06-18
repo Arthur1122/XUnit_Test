@@ -4,11 +4,11 @@ using System.Text;
 
 namespace PrimeService
 {
-    public class PrimeService
+    public class PrimeServices
     {
         public bool IsPrime(int candidate)
         {
-            if (candidate < 2)
+            if (candidate == 2)
             {
                 return false;
             }
