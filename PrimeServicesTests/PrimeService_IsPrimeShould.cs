@@ -13,12 +13,16 @@ namespace PrimeServicesTests
             _primeService = new PrimeServices();
         }
 
-        [Fact]
-        public void ReturnFalseGivenValueOf1()
+        [Theory]
+        [InlineData(-1)]
+        [InlineData(0)]
+        [InlineData(1)]
+        public void ReturnFalseGivenValuesLessThan2(int value)
         {
-            var result = _primeService.IsPrime(2);
+            var result = _primeService.IsPrime(value);
 
-            Assert.False(result, "1 should not be prime");
+            Assert.False(result, $"{value} should not be prime");
         }
+
     }
 }

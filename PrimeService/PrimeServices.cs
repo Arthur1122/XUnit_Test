@@ -8,7 +8,7 @@ namespace PrimeService
     {
         public bool IsPrime(int candidate)
         {
-            if (candidate == 2)
+            if (candidate == 1)
             {
                 return false;
             }
